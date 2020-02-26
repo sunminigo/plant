@@ -1,4 +1,4 @@
 # plant
 
 demo
-https://sunminigo.github.io/plant/
+https://sunminigo.github.io/plant/product_detail.html
