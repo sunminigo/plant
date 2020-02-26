@@ -20,13 +20,13 @@
 <div class="wrapper">
 	<header class="header__wrap">
 		<button class="btn_back"><img src="images/common/icon-back-black-menu@2x.png" alt="뒤로가기"></button>
-		<h2 class="sub_page_tit">[낭만팥집] 겨울 별미 단팥죽</h2>
+		<h2 class="sub_page_tit dot1">[낭만팥집] 겨울 별미 단팥죽</h2>
 	</header>
 
 	<section class="container__wrap product_detail__wrap">
 		<div class="tab__wrap">
-			<a href="" class="tab_btn active">상품상세</a>
-			<div id="tab_detail" class="tab_content">
+			<button rel="tab_detail" class="tab_tit active">상품상세</button>
+			<div id="tab_detail" class="tab_content first">
 				<section class="thumb_box">
 					<img src="images/thumb-product-list-sample-01@2x.png" alt="상세페이지메인이미지">
 				</section>
@@ -34,21 +34,17 @@
 				<section class="info_box">
 					<p class="store_name">[낭만팥집]</p>
 					<p class="product_name">겨울 별미 단팥죽</p>
-					<p class="product_price">6,000원 <span class="text_deco_line">12,900원</span></p>
+					<p class="product_price">6,000원<span class="text_deco_line">12,900원</span></p>
 					<p class="txt_info">마음마저 따듯해지는 겨울철 대표 메뉴, 단팥죽! 정성을 담아 팥을 끓이고, 새알심재료를 동글동글 빚어 맛있는 단팥죽 한 그릇을 만들었어요. 단팥죽의 온기와 죽을 만드는 사람의 정성까지 먹을 수 있답니다. 취향에 맞게 소금이나 설탕을 넣어 더욱 맛있게 즐겨보세요!</p>
 					<img src="images/img-product-detail-01@2x.png" alt="상세설명넣어줘야쥬?">
 					<img src="images/img-product-detail-02@2x.png" alt="상세설명넣어줘야쥬?">
 				</section>
-
-				<section class="btn__wrap">
-					<button class="btn btn_agree">구매하기</button>
-				</section>
 			</div>
 
-			<a href="" class="tab_btn">상점정보</a>
+			<button rel="tab_info" class="tab_tit">상점정보</button>
 			<div id="tab_info" class="tab_content">
 				<section class="thumb_box">
-					<img src="images/thumb-product-list-sample-01@2x" alt="상점정보이미지">
+					<img src="images/thumb-product-list-sample-01@2x.png" alt="상점정보이미지">
 				</section>
 
 				<section class="info_box">
@@ -86,15 +82,43 @@
 				</section>
 			</div>
 
-			<a href="" class="tab_btn">상품후기</a>
+			<button rel="tab_review" class="tab_tit">상품후기</button>
 			<div id="tab_review" class="tab_content">
 				후기들어갈꺼야아아아ㅏ
 			</div>
 		</div>
+		
+		<button class="btn btn_agree btn_big">구매하기</button>
+	
 	</section>
 </div>
-
-
+<script
+	src="https://code.jquery.com/jquery-2.2.4.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	crossorigin="anonymous"></script>
+<script>
+	//탭메뉴
+	$('.tab_content').hide();
+	$('.tab_content.first').show();
+	
+	$('.tab_tit').click(function(){
+		var activeTab = $(this).attr('rel');
+		
+		$('.tab_tit').removeClass('active');
+		$(this).addClass('active');
+		$(".tab_content").hide();
+		
+		$('#' + activeTab).show();
+	});
+	
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 10){
+			$('.product_detail__wrap .btn').fadeIn();
+		}else{
+			$('.product_detail__wrap .btn').fadeOut();
+		}
+	});
+</script>
 
 </body>
 </html>
