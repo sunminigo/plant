@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/*-----------------
+	reset
+------------------*/
+html,body,h1,h2,h3,h4,h5,section,nav,header,div,ul,li,span,strong,a,button,input,select,form, label{margin:0;padding:0;vertical-align:baseline;font-family:"Noto Sans KR", sans-serif;}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+html,body{line-height:1;}
+ul{list-style:none;}
+img{border:none;}
+a{text-decoration:none;color:#333;}
+input[type=submit]{-webkit-appearance:none;}
+.h2_hide{position:relative;z-index:9999;display:block;height:1px;width:1px;margin-bottom:-1px;overflow:hidden;font-size:0;color:transparent;font-weight:bold;background:none;white-space:nowrap;text-align:center;}
+
+
+/*-----------------
+	basic layout
+------------------*/
+@media (max-width:640px){
+	html, body{font-size:15px;}
+}
+@media (max-width:480px){
+	html, body{font-size:13px;}
+}
+@media (max-width:360px){
+	html,body{font-size:12px;}
+}
+@media (max-width:320px){
+	html,body{font-size:11px;}
+}
+@media (max-width:320px){
+	html,body{font-size:10px;}
+}
+
+/* html5 취소선 표시 */
+.text_deco_line{text-decoration:line-through;}
+
+/* btn */
+button
+button > img{width:100%;}
+
+
+
+
+/*----------------
+	common
+----------------*/
+.wrapper,
+.header__wrap,
+.container__wrap{position:relative;}
+
+/* sub */
+.sub_page_tit{text-align:center;padding:0 46px;font-size:18px;font-weight: bold;color:#333;}
+
+
+/*---------
+    header
+ ---------*/
+.header__wrap{}
+.header__wrap .btn_back{width:8px;height:100%;}
+
+/*---------
+    container
+ ---------*/
+.container__wrap{}
+.tab__wrap{position:relative;display:flex;border:1px solid red;}
+.tab__wrap .tab_btn{flex:1;text-align:center;height:42px;line-height:42px;background:#f7f7f7;}
+
+.tab__wrap .tab_content{position:absolute;top:42px;background:#f7f7f7;}
+#tab_info,#tab_review{display:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
